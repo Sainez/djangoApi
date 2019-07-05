@@ -4,9 +4,11 @@ cffi==1.12.3
 chardet==3.0.4
 cryptography==2.7
 defusedxml==0.6.0
+dj-database-url==0.5.0
 Django==2.2.2
 django-allauth==0.39.1
 django-apikey==0.2.0
+django-heroku==0.3.1
 django-rest-auth==0.9.5
 django-rest-authtoken==1.2.2
 django-rest-knox==2.3.0
@@ -16,6 +18,7 @@ drf-jwt-knox==0.1.0
 gunicorn==19.9.0
 idna==2.8
 oauthlib==3.0.1
+psycopg2==2.8.3
 pycparser==2.19
 PyJWT==1.7.1
 pyOpenSSL==19.0.0
