@@ -1,0 +1,151 @@
+/*------------------- Global -----------------------------*/
+/* Breakpoints: xs: 0,  sm: 576px; md: 768px; lg: 992px; xl: 1200px; */
+body header {
+  -webkit-box-shadow: 0 10px 30px black;
+          box-shadow: 0 10px 30px black;
+}
+
+body header nav {
+  padding-top: 0;
+}
+
+body header nav #mainTitle {
+  font-family: "Javanese Text";
+  color: teal;
+  font-size: 14px;
+  font-weight: bold;
+  text-shadow: 3px 3px 5px black;
+}
+
+body header nav #mainTitle span {
+  font-size: 17px;
+  font-family: "Javanese Text";
+}
+
+body header nav #pageTitle {
+  font-family: Georgia;
+  color: teal;
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 3px 3px 5px black;
+}
+
+body header nav #loggedUser {
+  font-family: "Javanese Text";
+  text-transform: capitalize;
+  color: orange;
+}
+
+body main #mainSection {
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  padding: 1em;
+  -webkit-box-shadow: 0 10px 30px black;
+          box-shadow: 0 10px 30px black;
+  background-color: transparent;
+}
+
+body main #mainSection #adminForm, body main #mainSection #managersForm, body main #mainSection #writersForm, body main #mainSection #articlesForm {
+  background-color: transparent;
+}
+
+body main #mainSection #loggedUser {
+  font-family: "Javanese Text";
+  text-transform: capitalize;
+  color: orange;
+}
+
+body main #mainSection #thepostedarticles {
+  color: seagreen;
+  font-family: "Javanese Text";
+  font-size: 13px;
+}
+
+body main #mainSection #thewriterslist {
+  color: #17a2b8;
+  font-family: "Javanese Text";
+  font-size: 13px;
+}
+
+body main #mainSection #theLogin {
+  color: #17a2b8;
+  font-family: "Javanese Text";
+  font-size: 22px;
+}
+
+body main #mainSection #tablist {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+body main #mainSection #tablist .list-group-item {
+  border: none;
+  background-color: transparent;
+  color: #17a2b8;
+  font-family: "Javanese Text";
+}
+
+body main #mainSection #tablist .list-group-item.active {
+  border: solid 1px seagreen;
+  color: limegreen;
+}
+
+body main #mainSection #tablist .list-group-item.active:hover {
+  border: solid 1px seagreen;
+}
+
+body main #mainSection #tablist .list-group-item:hover {
+  border: solid 1px seagreen;
+}
+
+body main #mainSection .list-group {
+  background-color: transparent;
+  border-radius: 10px;
+  font-size: 12px;
+  list-style-type: none;
+  text-align: center;
+}
+
+body main #mainSection .list-group div {
+  background-color: transparent;
+}
+
+body main #mainSection .list-group div li {
+  text-transform: capitalize;
+  font-family: Georgia;
+  color: orange;
+}
+
+body main #mainSection .list-group div li fa {
+  cursor: pointer;
+}
+
+body main #mainSection .list-group div li #authorTag {
+  text-transform: capitalize;
+  font-family: Georgia;
+  color: saddlebrown;
+  font-size: 12px;
+  font-style: italic;
+}
+
+body main #mainSection .list-group div blockquote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+body main #instructions {
+  padding: 4px;
+  border: solid 2px saddlebrown;
+  background-color: transparent;
+  color: saddlebrown;
+  font-family: "Javanese Text";
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,68 @@
+{% extends 'writerspad/base.html' %}
+
+{% block title %}TheWriter|HomePage{% endblock %}
+
+{% block header %}
+
+<nav class="navbar navbar-expand-md navbar-dark sticky-top">
+    <div class="container-fluid">
+        <a id="navbar_brand" class="navbar-brand w-100" href="#"><span id="mainTitle" class="float-left">
+                    THE
+            <span>WRITERS</span>
+                    PAD
+        </span>
+            <span id="pageTitle" class="float-right">Managers Section</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse w-100" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><h6 id="loggedUser" href="#" class="nav-link"></h6></li>
+                <li class="nav-item">
+                    <button id="logout" class="nav-link btn btn-sm btn-outline-danger">Logout</button>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+{% endblock %}
+
+{% block body %}
+
+    <section id="mainSection" class="col-md-8 col-sm-11 mx-auto p-2 rounded">
+
+        <form id="regWriterForm" class="form mb-2 text-center">
+
+        <button id="btnRegWriter" type="button" class="btn btn-outline-success btn-sm"> Register Writer </button>
+
+
+        </form>
+
+
+
+        <form id="writersForm" class="form text-center rounded">
+
+            <h6 id="thewriterslist"> Writters Lists</h6>
+
+            <ul id="list_group_writers" class="list-group">
+
+            </ul>
+
+        </form>
+
+        </section>
+
+
+
+    {% load staticfiles %}
+
+    <!-- Functions Script -->
+    <script type="text/javascript" src="{% static 'writerspad/functions/manage.js' %}"></script>
+
+
+{% endblock %}

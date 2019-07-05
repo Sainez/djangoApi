@@ -1,0 +1,179 @@
+/*------------------- Global -----------------------------*/
+/* Breakpoints: xs: 0,  sm: 576px; md: 768px; lg: 992px; xl: 1200px; */
+$colors: (
+    fevorite: #e8491d,
+    primary: #007bff,
+    primary-light: lighten(#005DFF, 40%),
+    primary-dark: darken(#005DFF, 40%),
+    dark-info: darken(#17a2b8, 20%),
+    accent: #FFF6BB,
+    secondary: rgba(0, 0, 0, .5),
+    success: #28a745,
+    info: #17a2b8,
+    warning: #ffc107,
+    danger: #dc3545,
+    orange-light: rgba(255, 165, 0, .7)
+
+);
+
+@function color($color-name){
+    @return map-get($colors, $color-name )
+};
+
+$desktop: 768px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+body{
+
+    header{
+        box-shadow: 0 10px 30px rgb(0, 0, 0);
+
+        nav{
+            padding-top: 0;
+
+            #mainTitle{
+
+                font-family: "Javanese Text";
+                color: teal;
+                font-size: 14px;
+                font-weight: bold;
+                text-shadow: 3px 3px 5px rgb(0,0,0);
+
+                span{
+                    font-size: 17px;
+                    font-family: "Javanese Text";
+        
+                }
+            }
+            #pageTitle{
+                font-family: Georgia;
+                color: teal;
+                font-size: 12px;
+                font-weight: bold;
+                text-shadow: 3px 3px 5px rgb(0,0,0);
+            }
+            #loggedUser{
+                font-family: "Javanese Text";
+                text-transform: capitalize;
+                color: orange;
+            }
+
+        }
+    }
+
+    main{
+
+        #mainSection{
+            border: none;
+            border-radius: 10px;
+            width: 100%;
+            padding: 1em;
+            box-shadow: 0 10px 30px rgb(0, 0, 0);
+            background-color: transparent;
+
+            #adminForm, #managersForm, #writersForm, #articlesForm{
+                background-color: transparent;
+            }
+
+            #loggedUser{
+                font-family: "Javanese Text";
+                text-transform: capitalize;
+                color: orange;
+            }
+
+            #thepostedarticles{
+                color: seagreen;
+                font-family: "Javanese Text";
+                font-size: 13px;
+            }
+
+            #thewriterslist{
+                color: color(info);
+                font-family: "Javanese Text";
+                font-size: 13px;
+            }
+
+            #theLogin{
+                color: color(info);
+                font-family: "Javanese Text";
+                font-size: 22px;
+            }
+
+            #tablist{
+                cursor: pointer;
+                background-color: transparent;
+
+                .list-group-item{
+                    border: none;
+                    background-color: transparent;
+                    color: color(info);
+                    font-family: "Javanese Text";
+
+                    &.active{
+                        border: solid 1px seagreen;
+                        color: limegreen;
+
+                        &:hover{
+                            border: solid 1px seagreen;
+                        }
+                    }
+                    &:hover{
+                        border: solid 1px seagreen;
+                    }
+                }
+            }
+
+            .list-group {
+                background-color: transparent;
+                border-radius: 10px;
+                font-size: 12px;
+                list-style-type: none;
+                text-align: center;
+
+                div{
+                    background-color: transparent;
+
+                    li{
+                        text-transform: capitalize;
+                        font-family: Georgia;
+                        color: orange;
+
+                        fa{
+                            cursor: pointer;
+                        }
+                        #authorTag{
+                            text-transform: capitalize;
+                            font-family: Georgia;
+                            color: saddlebrown;
+                            font-size: 12px;
+                            font-style: italic;
+                        }
+                    }
+                    blockquote {
+                        display: flex;
+                        flex-direction: row;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    
+                }
+                
+            }
+        }
+        #instructions{
+            padding: 4px;
+            border: solid 2px saddlebrown;
+            background-color: transparent;
+            color: saddlebrown;
+            font-family: "Javanese Text";
+
+        }
+    }
+
+
+}

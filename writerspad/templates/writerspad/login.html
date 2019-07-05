@@ -1,0 +1,43 @@
+{% extends 'writerspad/base.html' %}
+
+{% block title %}TheWriter|HomePage{% endblock %}
+
+{% block header%}
+
+<nav class="navbar navbar-expand-md bg-dark sticky-top">
+     <div class="container-fluid">
+        <a id="mainTitle" class="navbar-brand w-100 text-center" href="#">THE<span>WRITERS</span>PAD</a>
+    </div>
+</nav>
+
+{% endblock %}
+
+{% block body %}
+
+    <section id="mainSection" class="bg-dark text-center col-md-8 col-sm-11 mx-auto rounded p-2">
+            <h4 id="theLogin">Login</h4>
+        <hr>
+        <form id="logForm" class="text-center">
+
+            <button id="btnLogWriter" type="button" class="btn btn.sm btn-outline-primary">Writer</button>
+            <button id="btnLogManager" type="button" class="btn btn.sm btn-outline-success">Manager</button>
+            <button id="btnLogAdmin" type="button" class="btn btn.sm btn-outline-warning">Admin</button>
+            <button id="btnRegAdmin" type="button" class="btn btn.sm btn-outline-info">Register as Admin</button>
+        </form>
+        <hr>
+        <div id="instructions" class="w-50 mx-auto rounded">
+            <p>Writers are registered by a manager</p>
+            <p>Managers are registered by an admin</p>
+            <p>Admins can create their own accounts</p>
+        </div>
+    </section>
+
+
+
+    {% load staticfiles %}
+
+    <!-- Functions Script -->
+    <script type="text/javascript" src="{% static 'writerspad/functions/login.js' %}"></script>
+
+
+{% endblock %}

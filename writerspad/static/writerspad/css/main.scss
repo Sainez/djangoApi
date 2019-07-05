@@ -1,0 +1,30 @@
+$colors: (
+    primary: #005DFF,
+    primary-light: lighten(#005DFF, 40%),
+    primary-dark: darken(#005DFF, 40%),
+    accent: #FFF6BB,
+    girlish: rgb(195, 15, 201)
+);
+
+$padding: 15px;
+$borders: 15px;
+
+@function color($color-name){
+    @return map-get($colors, $color-name)
+}
+
+$desktop: 678px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+body, html{
+    height: 100%;
+}
+
+body {
+  background-color: color(primary);
+}

@@ -1,0 +1,40 @@
+{% load staticfiles %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Writerspad|Login{% endblock %}</title>
+
+
+    <link rel="stylesheet" type="text/css" href="{% static 'writerspad/css/bootstrap.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'writerspad/css/all.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'writerspad/styles/main.css' %}"/>
+
+
+</head>
+<body class="bg-dark">
+
+    <script type="text/javascript" src="{% static 'writerspad/js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'writerspad/js/bootstrap.js' %}"></script>
+
+
+    <!---------------------------------- Header ------------------------------------>
+
+
+        <header class="mb-3">
+            {% block header %}
+            {% endblock %}
+
+        </header>
+    <!---------------------------------- Body ------------------------------------>
+    <main class="pl-5 pr-5">
+
+        {% block body %}
+        {% endblock %}
+
+
+    </main>
+
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+{% extends 'writerspad/base.html' %}
+
+{% block title %}TheWriter|Admin{% endblock %}
+
+{% block header %}
+
+<nav class="navbar navbar-expand-md navbar-dark sticky-top">
+    <div class="container-fluid">
+        <a id="navbar_brand" class="navbar-brand mt-0 w-100" href="#">
+            <span id="mainTitle" class="float-left">
+                        THE
+                <span>WRITERS</span>
+                        PAD
+            </span>
+            <span id="pageTitle" class="float-right">Admin Section</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse w-100" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><h6 id="loggedUser" href="#" class="nav-link"></h6></li>
+                <li class="nav-item">
+                    <button id="logout" class="nav-link btn btn-sm btn-outline-danger">Logout</button>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+{% endblock %}
+
+{% block body %}
+
+    <section id="mainSection" class="col-md-8 col-sm-11 mx-auto p-2 rounded">
+
+        <form id="logForm" class="mb-2 text-center">
+
+            <button id="btnRegisterWriter" type="button" class="btn btn-sm btn-outline-primary mr-2">Add Writer</button>
+            <button id="btnRegisterManager" type="button" class="btn btn-sm btn-outline-warning mr-2">Add Manager</button>
+             <button id="btnRegisterAdmin" type="button" class="btn btn-sm btn-outline-success mr-2">Add Admin</button>
+
+        </form>
+
+
+
+        <form id="tablist" class="list-group flex-row small ml-0 mw-75" role="tablist">
+
+            <a id="adminTab" class="list-group-item list-group-item-action active ml-0 mr-0" data-toggle="list">Admin Lists</a>
+            <a id="managersTab" class="list-group-item list-group-item-action ml-0 mr-0" data-toggle="list">Managers Lists</a>
+            <a id="writersTab" class="list-group-item list-group-item-action ml-0 mr-0" data-toggle="list">Writers Lists</a>
+            <a id="articlesTab" class="list-group-item list-group-item-action ml-0 mr-0" data-toggle="list">Articles Lists</a>
+
+
+        </form>
+        <form id="adminForm" class="form">
+            <ul id="list_group_admin" class="list-group">
+
+            </ul>
+        </form>
+        <form id="managersForm" class="form">
+            <ul id="list_group_managers" class="list-group">
+
+            </ul>
+        </form>
+        <form id="writersForm" class="form">
+            <ul id="list_group_writers" class="list-group">
+
+            </ul>
+        </form>
+        <form id="articlesForm" class="form">
+                <ul id="list_group_articles" class="list-group">
+
+            </ul>
+        </form>
+
+    </section>
+
+
+
+    {% load staticfiles %}
+
+    <!-- Functions Script -->
+    <script type="text/javascript" src="{% static 'writerspad/functions/admin.js' %}"></script>
+    <script type="text/javascript" src="{% static 'writerspad/functions/admin_show.js' %}"></script>
+
+
+{% endblock %}
