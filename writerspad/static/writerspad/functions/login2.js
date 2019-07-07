@@ -86,36 +86,25 @@ btnLogManager.addEventListener('click',(e)=>{
 btnLogAdmin.addEventListener('click',(e)=>{
     e.preventDefault();
 
-    let pop = [prompt('username'), prompt('Email'), prompt('password')];
+    let pop = [prompt('username'), prompt('password')];
 
-    function validateEmail(email) {
-        let re = /\S+@\S+\.\S+/;
-        return re.test(email);
-    }
-
-    if( pop[0] === null && pop[1] === null && pop[2] === null ){
+    if( pop[0] === null && pop[1] === null ){
             alert('try again')
     }
 
-    else if ( pop[0] === "" || pop[1] === "" || pop[2] === "" ) {
+    else if ( pop[0] === "" || pop[1] === "" ) {
         alert('Fill all the Inputs !!')
-    }
-
-    else if (!validateEmail(pop[1])){
-        alert('Wrong Email Format !')
     }
 
     else {
         let username = pop[0];
-        let email = pop[1];
-        let password = pop[2];
+        let password = pop[1];
 
         $.ajax({
             type: 'post',
             url: '/api/auth/',
             data: {
                 username: username,
-                email: email,
                 password: password
             },
             success: function (data) {
