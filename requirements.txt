@@ -12,7 +12,7 @@ django-heroku==0.3.1
 django-rest-auth==0.9.5
 django-rest-authtoken==1.2.2
 django-rest-knox==2.3.0
-djangorestframework==3.9.4
+djangorestframework==3.11.2
 djangorestframework-jwt==1.11.0
 drf-jwt-knox==0.1.0
 gunicorn==19.9.0
